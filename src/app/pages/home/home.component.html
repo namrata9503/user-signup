@@ -1,0 +1,14 @@
+<div class="container">
+  <div class="details">
+    <p class="heading text-center">Thank You For Signing Up!</p>
+
+    <section class="info">
+      <p *ngFor="let sentence of text">
+        {{ sentence }}
+      </p>
+    </section>
+    <div class="button-container d-flex justify-content-center">
+      <ui-button text="Go Back" (click)="goBack()"></ui-button>
+    </div>
+  </div>
+</div>

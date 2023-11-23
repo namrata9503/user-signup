@@ -1,0 +1,48 @@
+<div class="container">
+  <div class="details">
+    <app-title title="Create your account"></app-title>
+    <form
+      *ngIf="signupForm"
+      [formGroup]="signupForm"
+      (ngSubmit)="submit()"
+      class="mt-4"
+    >
+      <div class="row">
+        <div class="col-md-6">
+          <app-text-input
+            [control]="data['firstName']"
+            [showErrors]="isSubmitted"
+            label="First Name"
+          >
+          </app-text-input>
+        </div>
+        <div class="col-md-6">
+          <app-text-input
+            [control]="data['lastName']"
+            [showErrors]="isSubmitted"
+            label="Last Name"
+          >
+          </app-text-input>
+        </div>
+        <app-text-input
+          [control]="data['email']"
+          [showErrors]="isSubmitted"
+          label="Email"
+          type="email"
+        >
+        </app-text-input>
+        <app-text-input
+          [control]="data['password']"
+          [showErrors]="isSubmitted"
+          label="Password"
+          type="password"
+        >
+        </app-text-input>
+        <div class="button-container mt-3">
+          <ui-button text="SignUp"></ui-button>
+          <ui-button text="Cancel" type="button" (click)="cancel()"></ui-button>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>

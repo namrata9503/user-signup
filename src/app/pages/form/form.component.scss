@@ -1,0 +1,35 @@
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+
+  .details {
+    width: 80%;
+    max-width: 35rem;
+    background-color: rgba(247, 247, 247, 0.5);
+    padding: 30px 50px;
+    border-radius: 15px;
+
+    @media (min-width: 576px) {
+      width: 70%;
+    }
+
+    @media (min-width: 768px) {
+      width: 60%;
+    }
+
+    .button-container {
+      display: flex;
+      justify-content: center;
+
+      @media (max-width: 576px) {
+        flex-direction: column;
+      }
+
+      @media (min-width: 577px) and (max-width: 992px) {
+        justify-content: center;
+      }
+    }
+  }
+}
